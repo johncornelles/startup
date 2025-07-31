@@ -87,23 +87,8 @@ export default function HomePage() {
           <p className="text-xl text-slate-600 mb-12 max-w-3xl mx-auto leading-relaxed">
             Discover innovative companies that are reshaping industries. From early-stage startups to billion-dollar unicorns.
           </p>
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-16">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
-              <Input
-                placeholder="Search startups, categories, or technologies..."
-                value={searchQuery}
-                onChange={e => setSearchQuery(e.target.value)}
-                className="pl-12 pr-4 py-4 text-lg border-slate-200 bg-white/80 backdrop-blur-sm shadow-lg focus:shadow-xl transition-all duration-300"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Statistics Section */}
-      <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
+          {/* Statistics Section */}
+          <section className="relative py-16 px-4 sm:px-6 lg:px-8 bg-white border-t border-slate-100">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <StatCard icon={<Building2 className="w-6 h-6 text-blue-600" />} value={totalStartups} label="Total Startups" bg="bg-blue-100" />
@@ -113,6 +98,24 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+          
+        </div>
+      </section>
+
+      {/* Search Bar */}
+
+      <div className="max-w-2xl mx-auto mb-16">
+        
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-200" />
+              <Input
+                placeholder="Search startups, categories, or technologies..."
+                value={searchQuery}
+                onChange={e => setSearchQuery(e.target.value)}
+                className="pl-12 pr-4 py-4 text-lg border-slate-200 bg-white/80 backdrop-blur-sm shadow-lg focus:shadow-xl transition-all duration-300"
+              />
+            </div>
+          </div>
 
       {/* Filters & Startup Cards */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
