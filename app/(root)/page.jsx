@@ -121,7 +121,7 @@ export default function HomePage() {
       <section className="py-16 px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
           <div className="flex items-center gap-2">
-            <Filter className="w-4 h-4 text-slate-500" />
+            <Filter className="ml-15 w-4 h-4 text-slate-500" />
             <span className="text-sm font-medium text-slate-700">Filters:</span>
           </div>
           <div className="flex flex-wrap gap-3">

@@ -20,6 +20,11 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card"
 
 export default function StartupCard({ startup }) {
   const getStatusColor = (status) => {
@@ -117,39 +122,22 @@ export default function StartupCard({ startup }) {
               <span>{startup.funding_raised}</span>
             </div>
           )}
-        </div>
-
-        <div className="flex items-center gap-2">
-          <Link href="/" className="flex-1">
-            <Button
-              variant="outline"
-              className="w-full group-hover:bg-orange-50 group-hover:border-orange-200 group-hover:text-orange-700 transition-all duration-300"
-            >
-              <Popover>
-                <PopoverTrigger className="flex items-center w-full justify-between">
-                  View Details
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </PopoverTrigger>
-                <PopoverContent className="w-64">
-                  Place content for the popover here.
-                </PopoverContent>
-              </Popover>
-            </Button>
-          </Link>
-
-          {startup.website_url && (
+        </div>    
+        <div className="flex flex-1 items-center justify-center">
+             {startup.website_url && (
             <Button
               variant="ghost"
               size="icon"
               asChild
               className="hover:bg-orange-50 hover:text-orange-600 transition-colors"
             >
+                
               <a
                 href={startup.website_url}
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-              >
+                >
                 <ExternalLink className="w-4 h-4" />
               </a>
             </Button>
